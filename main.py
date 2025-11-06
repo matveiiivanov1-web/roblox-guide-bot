@@ -1,8 +1,8 @@
 import telebot
-from settings import TG_API_TOKEN
+#from settings import TG_API_TOKEN
     
     # Инициализация бота с использованием его токена
-bot = telebot.TeleBot(TG_API_TOKEN)
+bot = telebot.TeleBot("token")
     
     # Обработчик команды '/start' и '/hello'
 @bot.message_handler(commands=['start', 'hello'])
@@ -20,4 +20,5 @@ def send_heh(message):
         bot.reply_to(message, "he" * count_heh)
     
     # Запуск бота
+
 bot.polling()
