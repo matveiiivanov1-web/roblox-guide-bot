@@ -1,6 +1,6 @@
 import telebot
 #from settings import TG_API_TOKEN
-from bot_logic import gen_pass
+#from bot_logic import gen_pass
 
 #bot = telebot.TeleBot(TG_API_TOKEN)
 bot = telebot.TeleBot('token')
@@ -59,6 +59,7 @@ def handle_doors_text(message):
 #def handle_banana_text(message):
     #bot.reply_to(message, 'Бананы это круто!')
 
-gen_pass(10)
+#gen_pass(10)
 
 bot.polling()
+
