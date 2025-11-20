@@ -38,6 +38,12 @@ def handle_99nitf_text(message):
 @bot.message_handler(func=lambda message: 'Doors' in message.text)
 def handle_doors_text(message):
     bot.reply_to(message, 'Супер, здесь вещи, которые тебе могут помочь 1.Собирай монеты,когда пойдешь в следущий раунд ты сможешь себе купить вещи как фонарь итд. ')
+    
+@bot.message_handler(commands=['mem'])
+def send_mem(message):
+    random_mem = choice(os.listdir('images')) #'mem2.jpeg'
+    with open(f'images/{random_mem }', 'rb') as f:
+        bot.send_photo(message.chat.id, f)
 
 #@bot.message_handler(func=lambda message: 'Dead rails' in message.text)
 #def handle_dr_text(message):
@@ -62,4 +68,5 @@ def handle_doors_text(message):
 #gen_pass(10)
 
 bot.polling()
+
 
